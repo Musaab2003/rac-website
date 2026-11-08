@@ -7,13 +7,19 @@
   <link rel="icon" type="image/png" href="assets/icon.png">
 
   <!-- Bootstrap 5 CSS -->
+    <!-- Google Fonts: non-blocking preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- AOS Scroll Animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
   <!-- Custom Greek Mythology Theme CSS -->
-  <link rel="stylesheet" href="css/greek-theme.css">
+  
+  <link rel="preload" as="image" href="assets/hero-bg.jpg" fetchpriority="high"><link rel="stylesheet" href="css/greek-theme.css">
 
   <style>
     .blog-card-stele {
@@ -165,7 +171,7 @@
   <nav class="navbar navbar-expand-lg temple-navbar sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/nav_logo.png" alt="Rotaract ICBT | Create Lasting Impact" class="brand-logo-img">
+        <img fetchpriority="high" src="assets/nav_logo.png" alt="Rotaract ICBT | Create Lasting Impact" class="brand-logo-img">
       </a>
       <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
         <i class="fas fa-bars text-white fs-4"></i>
@@ -278,7 +284,7 @@
         </div>
         <div class="modal-body p-0" style="background: #ffffff;">
           <div class="position-relative" style="height: 280px; overflow: hidden; background: #000;">
-            <img id="readerImage" src="assets/gallery/IMG-20250813-WA0003.jpg" alt="Chronicle Cover" style="width: 100%; height: 100%; object-fit: cover;">
+            <img loading="lazy" decoding="async" id="readerImage" src="assets/gallery/IMG-20250813-WA0003.jpg" alt="Chronicle Cover" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="p-4 p-md-5">
             <div class="d-flex align-items-center gap-3 text-muted small mb-3">
@@ -310,7 +316,7 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="d-flex align-items-center gap-3 mb-3">
-            <img src="assets/footer_badge.png" alt="Rotaract Emblem" style="width: 54px; height: 54px; border-radius: 50%; box-shadow: 0 0 15px rgba(209, 216, 224, 0.4);">
+            <img loading="lazy" decoding="async" src="assets/footer_badge.png" alt="Rotaract Emblem" style="width: 54px; height: 54px; border-radius: 50%; box-shadow: 0 0 15px rgba(209, 216, 224, 0.4);">
             <div>
               <h5 class="greek-title text-white mb-0">Rotaract Club of ICBT</h5>
               <small class="text-light opacity-75">District 3220 &bull; Chartered 2018</small>
@@ -320,8 +326,8 @@
             Dedicated to transforming collegiate ambitions into sustainable community actions through leadership, international goodwill, and unswerving fellowship.
           </p>
           <div class="d-flex align-items-center gap-2 mt-3">
-            <span class="badge bg-dark border border-secondary text-white p-2">Sri Lanka <img src="https://flagcdn.com/w20/lk.png" alt="LK" width="16"></span>
-            <span class="badge bg-dark border border-secondary text-white p-2">Maldives <img src="https://flagcdn.com/w20/mv.png" alt="MV" width="16"></span>
+            <span class="badge bg-dark border border-secondary text-white p-2">Sri Lanka <img loading="lazy" decoding="async" src="https://flagcdn.com/w20/lk.png" alt="LK" width="16"></span>
+            <span class="badge bg-dark border border-secondary text-white p-2">Maldives <img loading="lazy" decoding="async" src="https://flagcdn.com/w20/mv.png" alt="MV" width="16"></span>
           </div>
         </div>
         <div class="col-sm-6 col-lg-2 footer-column-pillar">
@@ -367,9 +373,9 @@
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- AOS Animation JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
   <!-- Greek Theme Custom JS -->
-  <script src="js/greek-theme.js"></script>
+  <script src="js/greek-theme-v2.js" defer></script>
   <!-- Dynamic Blog Engine JS -->
   <script src="js/blog.js"></script>
   <script>
